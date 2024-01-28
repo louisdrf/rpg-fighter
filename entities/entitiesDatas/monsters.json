@@ -1,0 +1,48 @@
+{
+  "monsters": [
+    {
+      "id": 1,
+      "type": "monster",
+      "sprite_sheet_path": "C:/Users/louis/PycharmProjects/platform-fighter/sprite_sheets/player.png",
+      "health": 100,
+      "mana": 50,
+      "caracs": {
+        "agility": 20,
+        "intelligence": 10,
+        "chance": 15,
+        "force": 30
+      },
+      "level": 1,
+      "position": {
+        "x": 100,
+        "y": 200
+      },
+      "velocity": {
+        "dx": 0,
+        "dy": 0
+      }
+    },
+    {
+      "id": 2,
+      "type": "monster",
+      "sprite_sheet_path": "C:/Users/louis/PycharmProjects/platform-fighter/sprite_sheets/player.png",
+      "health": 80,
+      "mana": 20,
+      "caracs": {
+        "agility": 30,
+        "intelligence": 5,
+        "chance": 10,
+        "force": 25
+      },
+      "level": 2,
+      "position": {
+        "x": 150,
+        "y": 250
+      },
+      "velocity": {
+        "dx": 0,
+        "dy": 0
+      }
+    }
+  ]
+}

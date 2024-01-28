@@ -1,15 +1,21 @@
+import json
+from entities.entity import Entity
+
+
 class EntityManager:
     def __init__(self):
-        self.allEntities = []
+        self.monsters = []
 
-    @staticmethod
-    def loadEntityFromJsonFile(self, jsonFilePath):
-        print('todo')
+    def loadMonstersFromJsonFile(self, jsonFilePath):
+        with open(jsonFilePath, 'r') as file:
+            monsters_data = json.load(file)
+            monsters_list = monsters_data.get('monsters', [])
+            for monster_data in monsters_list:
+                self.addMonsterToGame(monster_data)
 
-    @staticmethod
-    def addEntityToGame(game):
-        print('todo')
+    def addMonsterToGame(self, monster_data):
+        monster_entity = Entity(monster_data)
+        self.monsters.append(monster_entity)
 
-    @staticmethod
-    def removeEntityFromGame(game, entityID):
-        print('todo')
+
+entityManager = EntityManager()

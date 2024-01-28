@@ -13,7 +13,7 @@ if __name__ == '__main__':
     game = Game()
     entityManager = EntityManager()
     entityManager.loadMonstersFromJsonFile('C:/Users/louis/PycharmProjects/platform-fighter/entities/entitiesDatas/monsters.json')
-    print(entityManager.monsters)
+    entityManager.printMonsters()
 
     # create the screen and launch loop
     game.launch_loop()

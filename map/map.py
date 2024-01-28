@@ -5,3 +5,4 @@ class Map:
         self.width = width
         self.height = height
 
+

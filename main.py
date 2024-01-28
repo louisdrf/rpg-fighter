@@ -1,21 +1,14 @@
 import pygame
 
-from screen import *
 from game import *
-from entities.entityManager import EntityManager
 
 if __name__ == '__main__':
     # setup game
     pygame.init()
-    main_screen = Screen(500, 500, "premier jeu")
-    main_screen.create()
-
     game = Game()
-    entityManager = EntityManager()
-    entityManager.loadMonstersFromJsonFile('C:/Users/louis/PycharmProjects/platform-fighter/entities/entitiesDatas/monsters.json')
-    entityManager.printMonsters()
 
-    # create the screen and launch loop
-    game.launch_loop()
+    # charger les entités du jeu
+    game.entityManager.loadEntitiesFromJsonFile('C:/Users/louis/PycharmProjects/platform-fighter/entities/entitiesDatas/monsters.json', 'monster')
+    # game.entityManager.loadEntitiesFromJsonFile('C:/Users/louis/PycharmProjects/platform-fighter/entities/entitiesDatas/pnjs.json', 'pnj')
 
-    pygame.quit()
+    game.run()

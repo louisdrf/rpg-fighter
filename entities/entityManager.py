@@ -5,19 +5,21 @@ from entities.entity import Entity
 class EntityManager:
     def __init__(self):
         self.monsters = []
+        self.pnjs = []
 
-    def loadMonstersFromJsonFile(self, jsonFilePath):
+    def loadEntitiesFromJsonFile(self, jsonFilePath, entityType):
         with open(jsonFilePath, 'r') as file:
-            monsters_data = json.load(file)
-            monsters_list = monsters_data.get('monsters', [])
-            for monster_data in monsters_list:
-                self.addMonsterToGame(monster_data)
+            entities_data = json.load(file)
+            entities_list = entities_data.get(entityType, [])
+            for entity_data in entities_list:
+                self.addEntityToGame(entity_data, entityType)
 
-
-    def addMonsterToGame(self, monster_data):
-        monster_entity = Entity(monster_data)
-        self.monsters.append(monster_entity)
-
+    def addEntityToGame(self, entityData, entityType):
+        entity = Entity(entityData)
+        if entityType == 'monster':
+            self.monsters.append(entity)
+        if entityType == 'pnj':
+            self.monsters.append(entity)
 
     def printMonsters(self):
         print("Liste des monstres :")

@@ -4,27 +4,22 @@ from entities.entity import Entity
 
 class EntityManager:
     def __init__(self):
-        self.monsters = []
-        self.pnjs = []
+        self.entities = []
 
-    def loadEntitiesFromJsonFile(self, jsonFilePath, entityType):
+    def loadEntityFromJsonFile(self, jsonFilePath, entityType):
         with open(jsonFilePath, 'r') as file:
-            entities_data = json.load(file)
-            entities_list = entities_data.get(entityType, [])
-            for entity_data in entities_list:
-                self.addEntityToGame(entity_data, entityType)
+            entity_data = json.load(file).get(entityType)
+            print(entity_data)
+            if entity_data:
+                self.addEntityToGame(entity_data)
 
-    def addEntityToGame(self, entityData, entityType):
+    def addEntityToGame(self, entityData):
         entity = Entity(entityData)
-        if entityType == 'monster':
-            self.monsters.append(entity)
-        if entityType == 'pnj':
-            self.monsters.append(entity)
+        self.entities.append(entity)
 
     def printMonsters(self):
         print("Liste des monstres :")
-        for monster in self.monsters:
-            print(f"Monstre ID: {monster.id}")
+        for monster in self.entities:
             print(f"Type: {monster.type}")
             print(f"Sprite sheet path: {monster.sprite_sheet}")
             print(f"Health: {monster.life}")
@@ -33,6 +28,7 @@ class EntityManager:
             print(f"Level: {monster.level}")
             print(f"Position: {monster.position}")
             print(f"Velocity: {monster.velocity}")
+            print(f"images: {monster.images}")
             print()  # Ligne vide pour la clarté
 
 

@@ -1,0 +1,38 @@
+{
+  "golem":
+    {
+      "type": "golem",
+      "sprite_sheet_path": "C:/Users/louis/PycharmProjects/platform-fighter/sprite_sheets/monsters/golem.png",
+      "sprite_sheet_array": {
+        "move1": [ 1,1,1,1,0,0,0,0,0,0],
+        "move2": [1,1,1,1,1,1,1,1,0,0],
+        "attack1": [1,1,1,1,1,1,1,1,1,0],
+        "move3": [1,1,1,1,1,1,1,1,0,0],
+        "attack2": [1,1,1,1,1,1,1,0,0,0],
+        "hit1": [1,1,1,1,1,1,1,0,0,0],
+        "attack3": [1,1,1,1,1,1,1,1,1,1],
+        "attack4": [1,1,1,1,1,1,1,1,1,1],
+        "die": [1,1,1,1,0,0,0,0,0,0]
+      },
+      "cut_direction": "TORIGHT",
+      "height": 100,
+      "width": 100,
+      "health": 150,
+      "mana": 100,
+      "caracs": {
+        "agility": 20,
+        "intelligence": 10,
+        "chance": 15,
+        "force": 30
+      },
+      "level": 1,
+      "position": {
+        "x": 100,
+        "y": 200
+      },
+      "velocity": {
+        "dx": 0,
+        "dy": 0
+      }
+    }
+}

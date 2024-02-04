@@ -14,6 +14,17 @@
         "attack4":  [1,1,1,1,1,1,1,1,1,1],
         "die":      [1,1,1,1,0,0,0,0,0,0]
       },
+      "animation_indexes": {
+        "move1":    4,
+        "move2":    8,
+        "attack1":  9,
+        "move3":    8,
+        "attack2":  7,
+        "hit1":     7,
+        "attack3":  10,
+        "attack4":  10,
+        "die":      4
+      },
       "cut_direction": "TORIGHT",
       "height": 100,
       "width": 100,

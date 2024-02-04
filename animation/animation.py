@@ -3,7 +3,7 @@ import pygame
 
 class AnimateSprite(pygame.sprite.Sprite):
 
-    def __init__(self, sprite_sheet_path, sprite_sheet_array, cut_direction, height, width):
+    def __init__(self, sprite_sheet_path, sprite_sheet_array, animation_indexes, cut_direction, height, width):
         super().__init__()
         self.animation_index = 0
         self.velocity = 2
@@ -11,6 +11,7 @@ class AnimateSprite(pygame.sprite.Sprite):
         self.sprite_sheet = pygame.image.load(sprite_sheet_path).convert_alpha()
         self.cut_direction = cut_direction
         self.sprite_sheet_array = sprite_sheet_array
+        self.animation_indexes = animation_indexes
         self.images = self.cut_all_sprite_sheet_images(height, width)
 
     def get_image_from_spritesheet(self, startX, startY, spriteHeight, spriteWidth):

@@ -10,6 +10,13 @@
         "iddle1":  [1,1,1,1,0,0,0,0],
         "die":     [1,1,1,1,1,1,0,0]
       },
+      "animation_indexes": {
+        "move1":   8,
+        "move2":   8,
+        "attack1": 5,
+        "iddle1":  4,
+        "die":     6
+      },
       "cut_direction": "TORIGHT",
       "height": 64,
       "width": 64,

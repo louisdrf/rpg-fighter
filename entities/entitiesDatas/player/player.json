@@ -14,6 +14,17 @@
         "die2":     [1,1,1,1,0,0,0,0],
         "spell1":   [1,1,1,1,1,1,1,1]
       },
+      "animations_indexes": {
+        "iddle1":   6,
+        "attack1":  8,
+        "run1":     8,
+        "jump1":    8,
+        "jump2":    8,
+        "hit1":     4,
+        "die1":     8,
+        "die2":     4,
+        "spell1":   8
+      },
       "cut_direction": "TORIGHT",
       "height": 56,
       "width": 56,

@@ -38,4 +38,3 @@ class AnimateSprite(pygame.sprite.Sprite):
                 images.append(image)
             i += 1
         return images
-

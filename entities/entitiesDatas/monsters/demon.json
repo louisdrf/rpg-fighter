@@ -18,6 +18,7 @@
         "die":     6
       },
       "cut_direction": "TORIGHT",
+      "current_anim": "move1",
       "height": 64,
       "width": 64,
       "health": 150,
@@ -29,10 +30,7 @@
         "force": 30
       },
       "level": 1,
-      "position": {
-        "x": 100,
-        "y": 200
-      },
+      "position": [400, 400],
       "velocity": {
         "dx": 0,
         "dy": 0

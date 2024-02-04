@@ -1,0 +1,38 @@
+{
+  "player":
+    {
+      "type": "player",
+      "sprite_sheet_path": "C:/Users/louis/PycharmProjects/platform-fighter/sprite_sheets/player/player.png",
+      "sprite_sheet_array": {
+        "iddle1":   [1,1,1,1,1,1,0,0],
+        "attack1":  [1,1,1,1,1,1,1,1],
+        "run1":     [1,1,1,1,1,1,1,1],
+        "jump1":    [1,1,1,1,1,1,1,1],
+        "jump2":    [1,1,1,1,1,1,1,1],
+        "hit1":     [1,1,1,1,0,0,0,0],
+        "die1":     [1,1,1,1,1,1,1,1],
+        "die2":     [1,1,1,1,0,0,0,0],
+        "spell1":   [1,1,1,1,1,1,1,1]
+      },
+      "cut_direction": "TORIGHT",
+      "height": 56,
+      "width": 56,
+      "health": 100,
+      "mana": 100,
+      "caracs": {
+        "agility": 0,
+        "intelligence": 0,
+        "chance": 0,
+        "force": 0
+      },
+      "level": 1,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "velocity": {
+        "dx": 0,
+        "dy": 0
+      }
+    }
+}

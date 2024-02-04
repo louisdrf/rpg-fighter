@@ -1,0 +1,34 @@
+{
+  "demon":
+    {
+      "type": "demon",
+      "sprite_sheet_path": "C:/Users/louis/PycharmProjects/platform-fighter/sprite_sheets/monsters/demon.png",
+      "sprite_sheet_array": {
+        "move1":   [1,1,1,1,1,1,1,1],
+        "move2":   [1,1,1,1,1,1,1,1],
+        "attack1": [1,1,1,1,1,0,0,0],
+        "iddle1":  [1,1,1,1,0,0,0,0],
+        "die":     [1,1,1,1,1,1,0,0]
+      },
+      "cut_direction": "TORIGHT",
+      "height": 64,
+      "width": 64,
+      "health": 150,
+      "mana": 100,
+      "caracs": {
+        "agility": 20,
+        "intelligence": 10,
+        "chance": 15,
+        "force": 30
+      },
+      "level": 1,
+      "position": {
+        "x": 100,
+        "y": 200
+      },
+      "velocity": {
+        "dx": 0,
+        "dy": 0
+      }
+    }
+}

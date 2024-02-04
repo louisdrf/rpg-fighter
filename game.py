@@ -39,20 +39,16 @@ class Game:
         pressed = pygame.key.get_pressed()
 
         if pressed[pygame.K_UP]:
-            self.entityManager.player.move()
-            self.entityManager.player.move_up()
+            self.entityManager.player.move("up")
 
         elif pressed[pygame.K_DOWN]:
-            self.entityManager.player.move()
-            self.entityManager.player.move_down()
+            self.entityManager.player.move("down")
 
         elif pressed[pygame.K_LEFT]:
-            self.entityManager.player.move()
-            self.entityManager.player.move_left()
+            self.entityManager.player.move("left")
 
         elif pressed[pygame.K_RIGHT]:
-            self.entityManager.player.move()
-            self.entityManager.player.move_right()
+            self.entityManager.player.move("right")
 
         else:
             self.entityManager.player.idle()

@@ -37,19 +37,6 @@ class Entity(AnimateSprite):
 
                 self.clock = 0
 
-    def move_right(self):
-        self.position[0] += self.velocity
-
-    def move_left(self):
-        self.position[0] -= self.velocity
-
-    def move_up(self):
-        self.position[1] -= self.velocity
-
-    def move_down(self):
-
-        self.position[1] += self.velocity
-
     def idle(self):
         if self.current_action != "nothing":
             self.animation_index = 0
@@ -57,7 +44,16 @@ class Entity(AnimateSprite):
         self.current_action = "nothing"
         self.change_anim()
 
-    def move(self):
+    def move(self, direction):
+        if direction == "right":
+            self.position[0] += self.velocity
+        elif direction == "left":
+            self.position[0] -= self.velocity
+        if direction == "up":
+            self.position[1] -= self.velocity
+        elif direction == "down":
+            self.position[1] += self.velocity
+
         self.current_animation = "move1"
         self.current_action = "moving"
         self.change_anim()

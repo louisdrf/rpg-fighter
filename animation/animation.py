@@ -3,10 +3,10 @@ import pygame
 
 class AnimateSprite(pygame.sprite.Sprite):
 
-    def __init__(self, sprite_sheet_path, sprite_sheet_array, animation_indexes, cut_direction, height, width):
+    def __init__(self, sprite_sheet_path, sprite_sheet_array, animation_indexes, cut_direction, height, width, velocity):
         super().__init__()
         self.animation_index = 0
-        self.velocity = 2
+        self.velocity = velocity
         self.clock = 0
         self.sprite_sheet = pygame.image.load(sprite_sheet_path).convert_alpha()
         self.cut_direction = cut_direction

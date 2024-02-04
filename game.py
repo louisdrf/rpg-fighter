@@ -20,6 +20,11 @@ class Game:
             self.main_screen.screen.fill((0, 0, 0))
             self.handle_input()
             self.main_screen.screen.blit(self.entityManager.player.current_image, self.entityManager.player.position)
+
+            for entity in self.entityManager.entities:
+                entity.change_anim()
+                self.main_screen.screen.blit(entity.current_image, entity.position)
+
             pygame.display.flip()
 
             for event in pygame.event.get():

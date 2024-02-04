@@ -8,7 +8,8 @@ class Entity(AnimateSprite):
                          jsonFileData['animation_indexes'],
                          jsonFileData['cut_direction'],
                          jsonFileData['height'],
-                         jsonFileData['width'])
+                         jsonFileData['width'],
+                         jsonFileData['anim_velocity'])
 
         self.type = jsonFileData['type']
         self.sprite_sheet = jsonFileData['sprite_sheet_path']

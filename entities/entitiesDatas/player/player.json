@@ -27,6 +27,7 @@
       },
       "cut_direction": "TORIGHT",
       "current_anim": "idle1",
+      "anim_velocity": 2,
       "height": 56,
       "width": 56,
       "health": 100,

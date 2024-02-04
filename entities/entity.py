@@ -19,12 +19,13 @@ class Entity(AnimateSprite):
         self.position = jsonFileData['position']
         self.current_animation = jsonFileData['current_anim']
         self.current_image = self.images[self.current_animation][0]
+        self.current_action = "nothing"
 
     def change_anim(self):
         if self.current_animation in self.images:
             current_animation_images = self.images[self.current_animation]
             current_anim_nb_images = len(current_animation_images)
-            self.clock += self.velocity * 8
+            self.clock += self.velocity * 10
 
             if self.clock >= 120:
                 self.animation_index += 1
@@ -36,17 +37,26 @@ class Entity(AnimateSprite):
                 self.clock = 0
 
     def move_right(self):
-        self.change_anim()
         self.position[0] += self.velocity
 
     def move_left(self):
-        self.change_anim()
         self.position[0] -= self.velocity
 
     def move_up(self):
-        self.change_anim()
         self.position[1] -= self.velocity
 
     def move_down(self):
-        self.change_anim()
+
         self.position[1] += self.velocity
+
+    def idle(self):
+        if self.current_action != "nothing":
+            self.animation_index = 0
+        self.current_animation = "idle1"
+        self.current_action = "nothing"
+        self.change_anim()
+
+    def move(self):
+        self.current_animation = "move1"
+        self.current_action = "moving"
+        self.change_anim()

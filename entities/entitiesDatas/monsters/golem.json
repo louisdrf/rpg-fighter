@@ -4,10 +4,10 @@
       "type": "golem",
       "sprite_sheet_path": "C:/Users/louis/PycharmProjects/platform-fighter/sprite_sheets/monsters/golem.png",
       "sprite_sheet_array": {
-        "move1":    [1,1,1,1,0,0,0,0,0,0],
-        "move2":    [1,1,1,1,1,1,1,1,0,0],
+        "idle1":    [1,1,1,1,0,0,0,0,0,0],
+        "move1":    [1,1,1,1,1,1,1,1,0,0],
         "attack1":  [1,1,1,1,1,1,1,1,1,0],
-        "move3":    [1,1,1,1,1,1,1,1,0,0],
+        "move2":    [1,1,1,1,1,1,1,1,0,0],
         "attack2":  [1,1,1,1,1,1,1,0,0,0],
         "hit1":     [1,1,1,1,1,1,1,0,0,0],
         "attack3":  [1,1,1,1,1,1,1,1,1,1],
@@ -15,10 +15,10 @@
         "die":      [1,1,1,1,0,0,0,0,0,0]
       },
       "animation_indexes": {
-        "move1":    4,
-        "move2":    8,
+        "idle1":    4,
+        "move1":    8,
         "attack1":  9,
-        "move3":    8,
+        "move2":    8,
         "attack2":  7,
         "hit1":     7,
         "attack3":  10,
@@ -26,7 +26,7 @@
         "die":      4
       },
       "cut_direction": "TORIGHT",
-      "current_anim": "move1",
+      "current_anim": "idle1",
       "height": 100,
       "width": 100,
       "health": 150,

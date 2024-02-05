@@ -4,7 +4,7 @@
       "type": "player",
       "sprite_sheet_path": "C:/Users/louis/PycharmProjects/platform-fighter/sprite_sheets/player/player.png",
       "sprite_sheet_array": {
-        "idle1":   [1,1,1,1,1,1,0,0],
+        "idle1":    [1,1,1,1,1,1,0,0],
         "attack1":  [1,1,1,1,1,1,1,1],
         "move1":    [1,1,1,1,1,1,1,1],
         "jump1":    [1,1,1,1,1,1,1,1],
@@ -15,9 +15,9 @@
         "spell1":   [1,1,1,1,1,1,1,1]
       },
       "animation_indexes": {
-        "idle1":   6,
+        "idle1":    6,
         "attack1":  8,
-        "move1":     8,
+        "move1":    8,
         "jump1":    8,
         "jump2":    8,
         "hit1":     4,

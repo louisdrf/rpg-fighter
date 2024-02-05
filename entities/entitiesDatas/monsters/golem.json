@@ -39,7 +39,7 @@
         "force": 30
       },
       "level": 1,
-      "position": [300, 300],
+      "position": [250, 250],
       "velocity": {
         "dx": 0,
         "dy": 0

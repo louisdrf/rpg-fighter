@@ -7,14 +7,14 @@
         "move1":   [1,1,1,1,1,1,1,1],
         "move2":   [1,1,1,1,1,1,1,1],
         "attack1": [1,1,1,1,1,0,0,0],
-        "idle1":  [1,1,1,1,0,0,0,0],
+        "idle1":   [1,1,1,1,0,0,0,0],
         "die":     [1,1,1,1,1,1,0,0]
       },
       "animation_indexes": {
         "move1":   8,
         "move2":   8,
         "attack1": 5,
-        "idle1":  4,
+        "idle1":   4,
         "die":     6
       },
       "cut_direction": "TORIGHT",
@@ -31,7 +31,7 @@
         "force": 30
       },
       "level": 1,
-      "position": [400, 400],
+      "position": [200, 200],
       "velocity": {
         "dx": 0,
         "dy": 0

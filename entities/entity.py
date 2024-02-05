@@ -24,6 +24,7 @@ class Entity(AnimateSprite):
         self.old_position = self.position.copy()
         self.current_animation = jsonFileData['current_anim']
         self.current_image = self.images[self.current_animation][0]
+        self.current_mask = self.images[self.current_animation][0]
         self.rect = self.current_image.get_rect()
         self.rect.x = self.position[0]
         self.rect.y = self.position[1]
@@ -35,7 +36,7 @@ class Entity(AnimateSprite):
         self.rect.y = self.position[1]
 
     def move_back(self):
-        self.position = self.old_position
+        self.position = self.old_position.copy()
 
     def idle(self):
         if self.current_action != "nothing":
@@ -49,9 +50,14 @@ class Entity(AnimateSprite):
 
         for entity in self.entityManager.entities:
             if entity != self:
-                if self.rect.colliderect(entity.rect):
-                    self.position = [0, 0]
+                if self.current_mask.overlap(entity.current_mask, (
+                        int(entity.position[0] - self.position[0]), int(entity.position[1] - self.position[1]))):
+                    self.move_back()
                     break
+
+        self.current_animation = "move1"
+        self.current_action = "moving"
+        self.change_anim()
 
         if direction == "right":
             self.orientation = "right"
@@ -63,7 +69,3 @@ class Entity(AnimateSprite):
             self.position[1] -= self.velocity
         elif direction == "down":
             self.position[1] += self.velocity
-
-        self.current_animation = "move1"
-        self.current_action = "moving"
-        self.change_anim()

@@ -11,6 +11,7 @@ class AnimateSprite(pygame.sprite.Sprite):
                  height, width,
                  velocity):
         super().__init__()
+        self.current_mask = None
         self.current_image = None
         self.animation_index = 0
         self.current_animation = None
@@ -21,15 +22,15 @@ class AnimateSprite(pygame.sprite.Sprite):
         self.cut_direction = cut_direction
         self.sprite_sheet_array = sprite_sheet_array
         self.animation_indexes = animation_indexes
-        self.images = self.cut_all_sprite_sheet_images(height, width)[0]
-        self.collide_masks = self.cut_all_sprite_sheet_images(height, width)[1]
+        self.images = self.get_images_and_masks(height, width)[0]
+        self.collide_masks = self.get_images_and_masks(height, width)[1]
 
     def get_image_from_spritesheet(self, startX, startY, spriteHeight, spriteWidth):
         image = pygame.Surface([spriteWidth, spriteHeight], pygame.SRCALPHA)
         image.blit(self.sprite_sheet, (0, 0), (startX, startY, spriteWidth, spriteHeight))
         return image
 
-    def cut_all_sprite_sheet_images(self, height, width):
+    def get_images_and_masks(self, height, width):
         images = {}
         masks = {}
         if self.cut_direction == 'TORIGHT':
@@ -58,14 +59,17 @@ class AnimateSprite(pygame.sprite.Sprite):
     def change_anim(self):
         if self.current_animation in self.images:
             current_animation_images = self.images[self.current_animation]
+            current_mask = self.collide_masks[self.current_animation]
             current_anim_nb_images = len(current_animation_images)
             self.clock += self.velocity * 11
 
             if self.clock >= 120:
                 self.animation_index += 1
+                self.current_mask = current_mask[self.animation_index - 1]
                 self.current_image = current_animation_images[self.animation_index - 1].convert_alpha()
                 if self.orientation == "left":
                     self.current_image = pygame.transform.flip(self.current_image, True, False)
+                    self.current_mask = pygame.mask.from_surface(self.current_image)
 
                 if self.animation_index >= current_anim_nb_images:
                     self.animation_index = 0
